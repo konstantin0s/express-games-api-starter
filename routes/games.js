@@ -35,7 +35,7 @@ module.exports = io => {
           pairs: []
         }],
         cards: utils.shuffle('✿★♦✵♣♠♥✖'.repeat(2).split(''))
-          .map((symbol) => ({ visible: false, symbol: symbol }))
+          .map((symbol) => ({ visible: false, symbol }))
       }
 
       Game.create(newGame)
