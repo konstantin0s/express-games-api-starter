@@ -5,9 +5,9 @@ const mongoose = require('mongoose')
 mongoose.Promise = global.Promise
 
 // Connect to MongoDB
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/memory-games'
+const MONGODB_URL = process.env.MONGODB_URL || 'mongodb://localhost/memory-games'
 mongoose.set('debug', true)
-mongoose.connect(MONGODB_URI, { useMongoClient: true })
+mongoose.connect(MONGODB_URL, { useMongoClient: true })
 
 // Monitor DB connection
 const db = mongoose.connection
